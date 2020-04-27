@@ -32,6 +32,15 @@ public class FirstspringprogramApplication {
 	public Student getResult2(@RequestBody Student s){
 		return s;
 	}
+
+	@GetMapping(value="/result3")
+	public Integer getResult1(@RequestParam(required = false) Integer val1,
+							  @RequestParam Integer val2){
+		System.out.println("val1----->"+val1);
+		System.out.println("val2----->"+val2);
+		return 0;
+	}
+
 }
 
 class Student{
